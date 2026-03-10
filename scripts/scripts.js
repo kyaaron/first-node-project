@@ -2,7 +2,7 @@ const pageButton = document.querySelector("#page-button");
 
 async function makeRequest() {
     const userInputValue = document.querySelector("#user-textbox").value;
-    const response = await fetch(`https://www.dnd5eapi.co/api/2014/spells/${userInputValue}`);
+    const response = await fetch(`https://www.dnd5eapi.co/api/2014/spells/${formatUserInput(userInputValue)}`);
     const data = await response.json();
 
     console.log(data);
@@ -14,6 +14,10 @@ async function makeRequest() {
       <p>Class: ${data.classes.name}</p>
       <p>Description: ${data.desc}</p>
     `
+}
+
+const formatUserInput = input => {
+    return input.split(" ").join("-").toLowerCase();
 }
 
 pageButton.addEventListener("click", makeRequest);
