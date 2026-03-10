@@ -1,4 +1,6 @@
 const pageButton = document.querySelector("#page-button");
+const spellsButton = document.querySelector("#spells-button");
+const monstersButton = document.querySelector("#monsters-button");
 
 async function makeRequest() {
     const userInputValue = document.querySelector("#user-textbox").value;

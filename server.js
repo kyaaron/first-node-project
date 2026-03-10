@@ -2,11 +2,9 @@ const http = require('http');
 const fs = require('fs');
 const url = require('url');
 const querystring = require('querystring');
-const figlet = require('figlet');
 
 const server = http.createServer((req, res) => {
     const page = url.parse(req.url).pathname;
-    const params = querystring.parse(url.parse(req.url).query);
     console.log(page);
 
     if (page === '/') {
@@ -16,15 +14,7 @@ const server = http.createServer((req, res) => {
     } else if (page === '/spells') {
         writeInformation('/spells');
     } else {
-        figlet('404!!', function(err, data) {
-            if (err) {
-                console.log('Something went wrong...');
-                console.dir(err);
-                return;
-            }
-            res.write(data);
-            res.end();
-        });
+        console.log("Do this later.");
     }
 })
 
@@ -37,3 +27,5 @@ const writeInformation = (pathname) => {
         res.end();
     })
 }
+
+server.listen(8000);
