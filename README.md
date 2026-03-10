@@ -10,6 +10,12 @@ The `server.js` uses three built-in Node modules (http, fs, url). I wrote `write
 
 I use the DnD5e API for the information served on each page.
 
+To run this locally, you can do the following steps:
+1. Download the repository code via `git clone`
+2. In your terminal, navigate to the project directory
+3. Run `node server.js`
+4. Go to http://localhost:8000/ in your browser
+
 ## Optmizations
 - Eventually I'll redo this project, or something similar, with ExpressJS.
 
