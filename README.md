@@ -1,6 +1,8 @@
 # First Node Project (DnD Search App #2)
 First standalone node project for 100devs. This project is a bare-bones NodeJS app that manually serves pages without any framework.
 
+Link to a Github-hosted version: https://kyaaron.github.io/first-node-project/
+
 ## How it's made
 The home page, monsters, and spells pages are all separate HTML pages. The `scripts.js` file has an async function that pulls data from the DnD5e Web API that I've used for past projects. 
 
