@@ -23,3 +23,7 @@ To run this locally, you can do the following steps:
 When using vanilla Node.js, I need to check for every single source mentioned on my HTML page. The browser checks for these, and if I don't include one, it will cause an infinite loading error. I ran into this initially with favicon.ico, styles.css, and scripts.js.
 
 This is the first major project I've used asynchronous Javascript functions. In `scripts.js`, the `makeRequest()` function fetches the API information using async/await keywords.
+
+Also, I had to write different href requests in my `index.html` page, because I'm serving up these pages via HTTP and my server instead of the filesystem. So I wrote `href='/spells'` for example, which will tell the browser to make a request to my server for that page. This was new to me.
+
+I also learned various HTML codes. I knew about 200 and 404, but I added a new one to this project (204) which means there is no content. This is for the favicon.ico check, which returns no content because I did not add favicons to this project (at this time).
